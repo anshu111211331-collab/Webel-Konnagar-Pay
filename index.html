@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webel Konnagar Payment Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Webel Konnagar Payment Portal</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <label for="course">Select Course:</label>
+        <select id="course" onchange="showAmount()">
+            <option value="">-- Choose Course --</option>
+        </select>
+
+        <div id="course-info">
+            <p><strong>Amount:</strong> ₹<span id="amount"></span></p>
+            <button id="payBtn">Pay Now</button>
+        </div>
+
+        <h3>Enter Your Details</h3>
+        <label>Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter full name" required>
+
+        <label>Father's Name</label>
+        <input type="text" id="fatherName" placeholder="Enter father's name" required>
+
+        <label>Transaction ID</label>
+        <input type="text" id="txnId" placeholder="Enter transaction ID" required>
+
+        <button onclick="sendWhatsApp()">Submit & Send via WhatsApp</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

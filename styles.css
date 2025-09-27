@@ -1,0 +1,151 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #004aad;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    gap: 10px;       /* spacing between logo and text */
+    position: relative;
+}
+
+.logo {
+    max-height: 50px;
+    flex-shrink: 0; /* prevent shrinking too much */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1 1 auto; /* grow and shrink as needed */
+    min-width: 0;   /* important for text ellipsis/wrapping */
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: flex-start; /* logo left, text follows */
+    }
+
+    .logo {
+        max-height: 40px;
+    }
+
+    header h1 {
+        font-size: 16px;
+        text-align: center; /* align left next to logo */
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        max-height: 30px;
+    }
+
+    header h1 {
+        font-size: 14px;
+    }
+}
+
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0066cc;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,102,204,0.4);
+}
+
+button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #004a99;
+}
+
+#course-info {
+    display: none;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+    .container {
+        padding: 15px;
+    }
+    input, button {
+        font-size: 13px;
+        padding: 8px;
+    }
+    label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 16px;
+    }
+    input, button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
